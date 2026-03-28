@@ -511,7 +511,7 @@
     /* ═══════════════════════════════════════════════════════════
        TESTIMONIALS
     ═══════════════════════════════════════════════════════════ */
-    .testimonials__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .testimonials__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
     .testimonial-card {
       background: var(--white);
       border-radius: var(--radius-lg);
@@ -851,6 +851,10 @@
               <span class="tag">SAFe / LeSS</span>
               <span class="tag">BI &amp; Metrics</span>
             </div>
+            <div style="margin-top:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+              <span style="font-size:.8rem; font-weight:600; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em;">Languages:</span>
+              <span style="font-size:.85rem; color:var(--gray-500);">English (Professional) · Russian (Limited Working) · German (Elementary)</span>
+            </div>
           </div>
 
         </div>
@@ -863,7 +867,7 @@
         <div class="section-header reveal" style="color:var(--white)">
           <span class="badge">Credentials</span>
           <h2 id="certs-heading" style="color:var(--white)">Certifications &amp; licences</h2>
-          <p style="color:rgba(255,255,255,.55)">15 certifikátů napříč Agile, Product Management, projektovým řízením a AI.</p>
+          <p style="color:rgba(255,255,255,.55)">15 certifications across Agile, Product Management, Project Management, and AI.</p>
         </div>
         <ul class="certs__grid" role="list">
           <li class="cert-card reveal">
@@ -1052,6 +1056,40 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
+         HOW TO ENGAGE
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section section--gray" id="engage" aria-labelledby="engage-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Working together</span>
+          <h2 id="engage-heading">How to engage</h2>
+          <p>Three ways to work together — depending on what you need.</p>
+        </div>
+        <div class="services__grid">
+
+          <article class="service-card reveal" aria-labelledby="eng1-heading">
+            <div class="service-card__icon" aria-hidden="true">🔍</div>
+            <h3 id="eng1-heading">Quick Engagement</h3>
+            <p>Audit, diagnostic, or workshop. Fixed scope, fixed price. Typically 1–5 days. Ideal for validating a hypothesis or unlocking a stuck decision.</p>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1" aria-labelledby="eng2-heading">
+            <div class="service-card__icon" aria-hidden="true">🚀</div>
+            <h3 id="eng2-heading">Project</h3>
+            <p>Defined outcome, clear deliverable, fixed or T&amp;M pricing. Typically 1–3 months. I design and deliver a targeted intervention — then we measure whether it worked.</p>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2" aria-labelledby="eng3-heading">
+            <div class="service-card__icon" aria-hidden="true">🔄</div>
+            <h3 id="eng3-heading">Long-term Retainer</h3>
+            <p>Ongoing coaching, advisory, or embedded capacity. Monthly arrangement, typically 4–8 days per month. Best for organizations going through sustained transformation.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
          EXPERIENCE
     ═══════════════════════════════════════════════════════════ -->
     <section class="section" id="experience" aria-labelledby="experience-heading">
@@ -1135,6 +1173,42 @@
             </div>
           </article>
 
+          <article class="case-card reveal" aria-labelledby="case5-heading">
+            <div class="case-card__meta">
+              <div>
+                <div class="case-card__company" id="case5-heading">BSC Praha</div>
+                <div class="case-card__role">Project Manager · Software &amp; Banking Systems</div>
+              </div>
+              <span class="case-card__period">2005 – 2008</span>
+            </div>
+            <div class="case-card__outcome">
+              <h4>Key outcomes</h4>
+              <ul role="list">
+                <li>Managed full software development lifecycle projects — from RFP response through delivery into production — across Czech and Russian banking clients.</li>
+                <li>Led cross-functional teams of consultants, analysts, developers, and QA across Java, C++, and Oracle stacks.</li>
+                <li>Defined and implemented internal delivery processes, building repeatable programme management practices.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="case-card reveal reveal-delay-1" aria-labelledby="case6-heading">
+            <div class="case-card__meta">
+              <div>
+                <div class="case-card__company" id="case6-heading">Centrum pro Outsourcing IT</div>
+                <div class="case-card__role">Project Manager &amp; Consultant</div>
+              </div>
+              <span class="case-card__period">2003 – 2006</span>
+            </div>
+            <div class="case-card__outcome">
+              <h4>Key outcomes</h4>
+              <ul role="list">
+                <li>Managed consulting engagements and small delivery teams in the early Czech IT outsourcing market.</li>
+                <li>Published articles on project management and IT in national magazines (Computerworld, IT Systems, eGovernment).</li>
+                <li>Presented at Forum eTIME 2005 Conference — an early marker of public thought leadership.</li>
+              </ul>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -1178,6 +1252,21 @@
               <div>
                 <div class="testimonial-card__name"><!-- TODO: replace -->Kateřina V.</div>
                 <p class="testimonial-card__title"><!-- TODO: replace -->Chief Operating Officer, Technology Company</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal reveal-delay-2">
+            <p class="testimonial-card__text">
+              "Jiri brought something rare: the discipline to actually measure whether the
+              Agile transformation was working. He introduced metrics we'd never tracked
+              before — and used them to steer the programme, not just report on it."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">TP</div>
+              <div>
+                <div class="testimonial-card__name">Tomáš P.</div>
+                <p class="testimonial-card__title">IT Director, Manufacturing &amp; Logistics</p>
               </div>
             </div>
           </article>
