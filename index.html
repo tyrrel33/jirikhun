@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jiri Khun – Product &amp; Agile Consultant</title>
-  <meta name="description" content="Jiri Khun helps organizations invest only in initiatives that demonstrably deliver value — combining Product Management, Agile, and data." />
+  <title>Jiří Khun | Agile Transformation · Project &amp; Portfolio Management · Data &amp; BI</title>
+  <meta name="description" content="Independent consultant specializing in agile transformation, project and portfolio management, and data-driven decision-making. Based in Prague. Available for engagements across CEE and remotely." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -708,6 +708,84 @@
       margin-top: 16px;
     }
 
+    /* ─── Hero Areas Tag Row ────────────────────────────────────── */
+    .hero__areas {
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    /* ─── Three-Pillar Block ─────────────────────────────────────── */
+    .pillars {
+      padding: 64px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-300);
+      border-bottom: 1px solid var(--gray-300);
+    }
+    .pillars__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .pillar {
+      padding: 48px 40px;
+      text-align: center;
+      border-right: 1px solid var(--gray-300);
+      transition: background .2s;
+    }
+    .pillar:last-child { border-right: none; }
+    .pillar:hover { background: var(--teal-dim); }
+    .pillar__icon { font-size: 2rem; margin-bottom: 16px; }
+    .pillar__title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .pillar__line {
+      font-size: .875rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .pillars__footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: .85rem;
+      color: var(--gray-500);
+      font-style: italic;
+    }
+
+    /* ─── PM & Portfolio CTA block ───────────────────────────────── */
+    .pm-cta {
+      margin-top: 64px;
+      padding: 40px 48px;
+      background: var(--teal-dim);
+      border: 1px solid rgba(13,148,136,.3);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+    .pm-cta p {
+      font-size: 1rem;
+      color: var(--navy);
+      max-width: 580px;
+      margin: 0 auto 24px;
+      line-height: 1.75;
+    }
+
+    /* ─── Signature badge variant ────────────────────────────────── */
+    .badge--signature {
+      background: rgba(13,148,136,.18);
+      color: var(--teal);
+      border: 1px solid rgba(13,148,136,.35);
+      margin-bottom: 10px;
+    }
+
     /* ═══════════════════════════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════════════════════════ */
@@ -723,6 +801,10 @@
       .contact__grid { grid-template-columns: 1fr; gap: 40px; }
       .process__steps { grid-template-columns: 1fr; gap: 40px; }
       .process__steps::before { display: none; }
+      .pillars__grid { grid-template-columns: 1fr; }
+      .pillar { border-right: none; border-bottom: 1px solid var(--gray-300); }
+      .pillar:last-child { border-bottom: none; }
+      .pm-cta { padding: 32px 24px; }
       .footer__inner { justify-content: center; text-align: center; }
     }
     @media (max-width: 768px) {
@@ -750,6 +832,7 @@
         <ul class="nav__links" role="list">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#pm-portfolio">PM &amp; Portfolio</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -762,6 +845,7 @@
     <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile navigation">
       <a href="#about" class="mobile-link">About</a>
       <a href="#services" class="mobile-link">Services</a>
+      <a href="#pm-portfolio" class="mobile-link">PM &amp; Portfolio</a>
       <a href="#certifications" class="mobile-link">Certifications</a>
       <a href="#process" class="mobile-link">How I Work</a>
       <a href="#experience" class="mobile-link">Experience</a>
@@ -782,10 +866,9 @@
             Start delivering <span class="accent">what matters.</span>
           </h1>
           <p class="hero__value">
-            I help organizations shift from delivery-focused execution to true value delivery —
-            combining Product Management, Agile, and data so you invest only in initiatives
-            that demonstrably move the needle.
+            I help organizations deliver the right things — and prove it.
           </p>
+          <p class="hero__areas">Agile transformation · Project &amp; portfolio management · Data-driven decisions</p>
           <div class="hero__ctas">
             <a href="#contact" class="btn btn--primary" aria-label="Contact Jiri Khun">Get in touch</a>
             <a href="#services" class="btn btn--outline">Explore services</a>
@@ -853,7 +936,7 @@
             </div>
             <div style="margin-top:16px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
               <span style="font-size:.8rem; font-weight:600; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em;">Languages:</span>
-              <span style="font-size:.85rem; color:var(--gray-500);">English (Professional) · Russian (Limited Working) · German (Elementary)</span>
+              <span style="font-size:.85rem; color:var(--gray-500);">English (Professional) · German (Elementary)</span>
             </div>
           </div>
 
@@ -965,6 +1048,32 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
+         THREE PILLARS
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="pillars" id="pillars" aria-label="Three areas of expertise">
+      <div class="container">
+        <div class="pillars__grid reveal">
+          <div class="pillar">
+            <div class="pillar__icon" aria-hidden="true">⚡</div>
+            <div class="pillar__title">Agile Transformation</div>
+            <p class="pillar__line">From delivery-focused execution to value delivery at scale.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon" aria-hidden="true">📋</div>
+            <div class="pillar__title">Project &amp; Portfolio Management</div>
+            <p class="pillar__line">Governance, prioritization, and forecasting that reflect reality.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon" aria-hidden="true">📈</div>
+            <div class="pillar__title">Data &amp; BI</div>
+            <p class="pillar__line">Data-driven decisions, self-service BI, and measurable outcomes.</p>
+          </div>
+        </div>
+        <p class="pillars__footer reveal">Each area works standalone — or as part of an integrated transformation.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
          SERVICES
     ═══════════════════════════════════════════════════════════ -->
     <section class="section section--gray" id="services" aria-labelledby="services-heading">
@@ -972,7 +1081,7 @@
         <div class="section-header reveal">
           <span class="badge">What I offer</span>
           <h2 id="services-heading">Three levers that unlock real value delivery</h2>
-          <p>Whether you need a sharper investment strategy, a scaled Agile operating model, or a data layer that actually informs decisions — I bring the frameworks, facilitation, and follow-through.</p>
+          <p>Three areas. One goal: make every investment count. I combine Agile transformation, project and portfolio management, and data-driven decision-making to help organizations deliver less — but with measurably greater impact.</p>
         </div>
         <div class="services__grid">
 
@@ -1016,6 +1125,108 @@
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PM & PORTFOLIO
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section" id="pm-portfolio" aria-labelledby="pm-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Service Area</span>
+          <h2 id="pm-heading">Project &amp; Portfolio Management</h2>
+          <p>Governance that supports delivery. Portfolios that reflect strategy. Projects that close the loop on value.</p>
+        </div>
+        <div class="services__grid">
+
+          <article class="service-card reveal" aria-labelledby="pm1-heading">
+            <div class="service-card__icon" aria-hidden="true">🏗️</div>
+            <h3 id="pm1-heading">PMO Design &amp; Setup</h3>
+            <p>A lean PMO that supports delivery instead of auditing it. Built for organizations that need governance without the overhead.</p>
+            <ul class="service-card__list" role="list">
+              <li>PMO operating model and governance framework</li>
+              <li>Portfolio visibility and prioritization process</li>
+              <li>Role definitions: PMO lead, project managers, delivery governance</li>
+              <li>Tooling setup (Jira, Monday, Asana, or equivalent)</li>
+              <li>90-day implementation roadmap with quick wins</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1" aria-labelledby="pm2-heading">
+            <div class="service-card__icon" aria-hidden="true">🎯</div>
+            <h3 id="pm2-heading">Portfolio Prioritization System</h3>
+            <p>Replace political prioritization with a transparent, criteria-based system that aligns portfolio decisions with business strategy.</p>
+            <ul class="service-card__list" role="list">
+              <li>Prioritization model design (WSJF, value/risk matrix, or custom)</li>
+              <li>Backlog governance process across teams and organizational layers</li>
+              <li>Stakeholder alignment workshop</li>
+              <li>Integration with existing planning cadences (QBR, PI Planning, etc.)</li>
+              <li>Documentation and training for portfolio owners</li>
+            </ul>
+          </article>
+
+
+          <article class="service-card reveal" aria-labelledby="pm4-heading">
+            <div class="service-card__icon" aria-hidden="true">🔬</div>
+            <span class="badge badge--signature">Signature Service</span>
+            <h3 id="pm4-heading">Backtesting Initiative Programme</h3>
+            <p>Most organizations never validate whether delivered initiatives actually worked. Backtesting closes that loop — systematically.</p>
+            <ul class="service-card__list" role="list">
+              <li>Backtesting process design aligned to your PDLC</li>
+              <li>Post-delivery metric definitions per initiative type</li>
+              <li>First backtesting sprint (validate 3–5 past initiatives)</li>
+              <li>Impact tracking dashboard setup</li>
+              <li>Quarterly backtesting cadence design</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1" aria-labelledby="pm5-heading">
+            <div class="service-card__icon" aria-hidden="true">🚨</div>
+            <h3 id="pm5-heading">Programme &amp; Project Recovery</h3>
+            <p>For programmes that are late, over budget, or have lost stakeholder confidence. Fast diagnostic, clear recovery plan, hands-on stabilization.</p>
+            <ul class="service-card__list" role="list">
+              <li>Rapid programme health assessment (3–5 days)</li>
+              <li>Root cause analysis: scope, governance, team, or technical issues</li>
+              <li>Recovery roadmap with prioritized interventions</li>
+              <li>Stakeholder communication plan and reset workshop</li>
+              <li>Optional: interim programme leadership during stabilization</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2" aria-labelledby="pm6-heading">
+            <div class="service-card__icon" aria-hidden="true">💼</div>
+            <h3 id="pm6-heading">Investment Planning &amp; Capacity Management</h3>
+            <p>Connect portfolio decisions to actual team capacity — so commitments reflect reality, not optimism.</p>
+            <ul class="service-card__list" role="list">
+              <li>Demand vs. capacity model across teams and value streams</li>
+              <li>Investment allocation framework (strategic vs. run-the-business vs. innovation)</li>
+              <li>Scenario planning for portfolio trade-offs</li>
+              <li>Integration with financial planning cycles</li>
+              <li>Quarterly rebalancing process design</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal" aria-labelledby="pm7-heading">
+            <div class="service-card__icon" aria-hidden="true">🧭</div>
+            <h3 id="pm7-heading">Delivery Governance for Leadership</h3>
+            <p>For senior leaders and boards who need visibility into programme portfolios without drowning in status reports.</p>
+            <ul class="service-card__list" role="list">
+              <li>Portfolio dashboard design (RAG, milestones, value delivered)</li>
+              <li>Escalation and decision framework</li>
+              <li>Steering committee facilitation model</li>
+              <li>Monthly/quarterly governance rhythm design</li>
+              <li>Training for C-level and B-1 stakeholders on reading delivery signals</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="pm-cta reveal">
+          <p>Not sure where to start? A 90-minute portfolio diagnostic call is often enough to identify the highest-leverage intervention.</p>
+          <a href="#contact" class="btn btn--primary">Book a diagnostic call</a>
+        </div>
+
       </div>
     </section>
 
@@ -1206,68 +1417,6 @@
                 <li>Published articles on project management and IT in national magazines (Computerworld, IT Systems, eGovernment).</li>
                 <li>Presented at Forum eTIME 2005 Conference — an early marker of public thought leadership.</li>
               </ul>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         TESTIMONIALS
-    ═══════════════════════════════════════════════════════════ -->
-    <section class="section section--gray" id="testimonials" aria-labelledby="testimonials-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="badge">Testimonials</span>
-          <h2 id="testimonials-heading">What clients say</h2>
-        </div>
-        <div class="testimonials__grid">
-
-          <!-- TODO: replace — add real testimonial text, name, and title -->
-          <article class="testimonial-card reveal">
-            <p class="testimonial-card__text">
-              "Jiri didn't just coach our teams on Agile — he changed how our leadership thinks about investment.
-              The prioritization model he introduced is now standard across our entire product organization.
-              For the first time, we can confidently say we're spending money on the right things."
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">MN</div>
-              <div>
-                <div class="testimonial-card__name"><!-- TODO: replace -->Martin N.</div>
-                <p class="testimonial-card__title"><!-- TODO: replace -->Head of Product, Financial Services</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- TODO: replace — add real testimonial text, name, and title -->
-          <article class="testimonial-card reveal reveal-delay-1">
-            <p class="testimonial-card__text">
-              "What sets Jiri apart is that he insists on measuring whether the change actually worked.
-              After introducing backtesting in our delivery process, we identified three high-investment initiatives
-              that had delivered zero measurable impact. That insight alone paid for the engagement many times over."
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">KV</div>
-              <div>
-                <div class="testimonial-card__name"><!-- TODO: replace -->Kateřina V.</div>
-                <p class="testimonial-card__title"><!-- TODO: replace -->Chief Operating Officer, Technology Company</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial-card reveal reveal-delay-2">
-            <p class="testimonial-card__text">
-              "Jiri brought something rare: the discipline to actually measure whether the
-              Agile transformation was working. He introduced metrics we'd never tracked
-              before — and used them to steer the programme, not just report on it."
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">TP</div>
-              <div>
-                <div class="testimonial-card__name">Tomáš P.</div>
-                <p class="testimonial-card__title">IT Director, Manufacturing &amp; Logistics</p>
-              </div>
             </div>
           </article>
 
