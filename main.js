@@ -36,6 +36,13 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// Uložení ručně zvolené jazykové verze — má přednost před detekcí jazyka prohlížeče
+document.querySelectorAll('[data-setlang]').forEach(link => {
+  link.addEventListener('click', () => {
+    try { localStorage.setItem('lang', link.dataset.setlang); } catch (e) {}
+  });
+});
+
 // Submit button loading state (text lokalizovaný přes data-sending atribut)
 const form = document.querySelector('form.contact-form');
 if (form) {

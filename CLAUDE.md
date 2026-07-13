@@ -18,14 +18,17 @@ There are no build steps, tests, or linting tools.
 
 ## Architecture
 
-- `index.html` — English version (default, served at `/`)
-- `cs/index.html` — Czech version (served at `/cs/`); full translation, same structure
+- `index.html` — Czech version (primary, served at `/`); its `<head>` contains the language-detection script
+- `en/index.html` — English version (served at `/en/`); full translation, same structure
+- `cs/index.html` — redirect stub only (legacy `/cs/` URL → `/`); do not add content here
 - `styles.css` — all CSS, shared by both language versions (single source of truth for design)
 - `main.js` — all JavaScript, shared by both language versions
 - `photo.jpg` — profile photo (used in About section and as `og:image`)
 - `favicon.svg` — favicon (navy rounded square, "JK" monogram, teal dot)
 
-**Two-language maintenance rule:** any content change must be applied to BOTH `index.html` and `cs/index.html`. Design/behavior changes go only to the shared `styles.css` / `main.js`. Each HTML file carries its own copy of the inline SVG icon sprite — keep the sprites identical.
+**Language detection:** inline script in the `<head>` of the root `index.html` — browsers whose `navigator.languages` contain no `cs`/`sk` are redirected to `en/`. A manual choice via the CZ/EN toggle is stored in `localStorage['lang']` (written by the `[data-setlang]` handler in `main.js`) and always takes precedence. Chosen deliberately over IP geolocation: works on static hosting, no third-party service.
+
+**Two-language maintenance rule:** any content change must be applied to BOTH `index.html` (Czech) and `en/index.html` (English). Design/behavior changes go only to the shared `styles.css` / `main.js`. Each HTML file carries its own copy of the inline SVG icon sprite — keep the sprites identical.
 
 **Design system (CSS variables at top of `styles.css`):**
 - Primary color: `#0d9488` (teal)
@@ -52,7 +55,4 @@ There are no build steps, tests, or linting tools.
 
 - `.booking-block` CSS (2026-07): external booking/calendar link was proposed and explicitly rejected — do not reintroduce
 - Emoji icons (2026-07): replaced by the SVG sprite — do not reintroduce emoji as UI icons
-
-## Other Files
-
-- `phpinfo.php` — utility script, not part of the website content
+- `phpinfo.php` (2026-07): server diagnostic script removed — a public `phpinfo()` leaks server configuration; do not commit it again
